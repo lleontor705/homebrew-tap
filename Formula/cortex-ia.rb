@@ -5,21 +5,21 @@
 class CortexIa < Formula
   desc "AI Agent Ecosystem Configurator — persistent memory, SDD workflow, inter-agent messaging, multi-CLI orchestration"
   homepage "https://github.com/lleontor705/cortex-ia"
-  version "0.0.12"
+  version "0.0.13"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/lleontor705/cortex-ia/releases/download/v0.0.12/cortex-ia_0.0.12_darwin_amd64.tar.gz"
-      sha256 "77bb42d13c87ee7b257e6f1985cfc19ff88db3c70ee43250a8be5fe61fef92a3"
+      url "https://github.com/lleontor705/cortex-ia/releases/download/v0.0.13/cortex-ia_0.0.13_darwin_amd64.tar.gz"
+      sha256 "655cec38a1122aea32f70af7c8d416b004b6dde2936829c12bdb34175a7fd675"
 
       define_method(:install) do
         bin.install "cortex-ia"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/lleontor705/cortex-ia/releases/download/v0.0.12/cortex-ia_0.0.12_darwin_arm64.tar.gz"
-      sha256 "262ae370854c5890ccca96880e43683c85b66243bfe8beaa1efec46d2873e95d"
+      url "https://github.com/lleontor705/cortex-ia/releases/download/v0.0.13/cortex-ia_0.0.13_darwin_arm64.tar.gz"
+      sha256 "00a23a7d4e9e0a69c40be9dc23f166facbae592c98a0a1412ca968e2e11d7771"
 
       define_method(:install) do
         bin.install "cortex-ia"
@@ -29,15 +29,15 @@ class CortexIa < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lleontor705/cortex-ia/releases/download/v0.0.12/cortex-ia_0.0.12_linux_amd64.tar.gz"
-      sha256 "a0efb09b0bc6f31b3da2587fd5adb0389a15521251bb50c66b73fff40ce199f8"
+      url "https://github.com/lleontor705/cortex-ia/releases/download/v0.0.13/cortex-ia_0.0.13_linux_amd64.tar.gz"
+      sha256 "636ba9029cfe0fc2991260dcceb046d51d5a22c116afd8702be193ea2514145d"
       define_method(:install) do
         bin.install "cortex-ia"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lleontor705/cortex-ia/releases/download/v0.0.12/cortex-ia_0.0.12_linux_arm64.tar.gz"
-      sha256 "f84bb340ce17e759128a51284cd44f2f2bd86c48c1ee4a047344dcc2ef1e83f1"
+      url "https://github.com/lleontor705/cortex-ia/releases/download/v0.0.13/cortex-ia_0.0.13_linux_arm64.tar.gz"
+      sha256 "9f2f1559db2dbe37286707f4f09aeba58c14391285002d6586a68b659461e7da"
       define_method(:install) do
         bin.install "cortex-ia"
       end
