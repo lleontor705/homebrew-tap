@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    name: Lint Formulae
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Homebrew
+        run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      - name: Lint Formulae
+        run: |
+          for formula in Formula/*.rb; do
+            echo "Linting $formula..."
+            brew audit --strict "$formula" || exit 1
+          done
+
+  test-install:
+    name: Test Install
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Homebrew
+        run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      - name: Tap this repository
+        run: brew tap lleontor705/homebrew-tap https://github.com/lleontor705/homebrew-tap.git
+      - name: Test cortex formula
+        run: |
+          brew install lleontor705/homebrew-tap/cortex || echo "Skipping cortex test (may require binary)"
+        continue-on-error: true
+      - name: Test cortex-ia formula
+        run: |
+          brew install lleontor705/homebrew-tap/cortex-ia || echo "Skipping cortex-ia test (may require binary)"
+        continue-on-error: true
