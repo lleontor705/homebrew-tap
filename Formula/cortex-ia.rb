@@ -11,7 +11,7 @@ class CortexIa < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/lleontor705/cortex-ia/releases/download/v0.4.0/cortex-ia_0.4.0_darwin_amd64.tar.gz"
-      sha256 "ef88d630d2a702793a91502189d036867e95b84b988bdb3d8878a3f6512fd53e"
+      sha256 "8b744cbe3fd228e1baa804f345cdee9a747099a0b069cf58a717c443b447d32c"
 
       define_method(:install) do
         bin.install "cortex-ia"
@@ -19,7 +19,7 @@ class CortexIa < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/lleontor705/cortex-ia/releases/download/v0.4.0/cortex-ia_0.4.0_darwin_arm64.tar.gz"
-      sha256 "cd52cd6b545b5e880376f0ad5d77d7caf24b33714c0c6894c73673ded6ef725d"
+      sha256 "2963a1c1324bdc6f526c396840798c23b9359a0cfce9b2f8a3af2b3e1ebaff52"
 
       define_method(:install) do
         bin.install "cortex-ia"
@@ -30,14 +30,14 @@ class CortexIa < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/lleontor705/cortex-ia/releases/download/v0.4.0/cortex-ia_0.4.0_linux_amd64.tar.gz"
-      sha256 "24bafba035b43f38f818bfd1c958c75130aa6ce570b0faa5805ac79c3f3024ce"
+      sha256 "c7785355e1ab3058b724e5c8c71faafd776eab326820fd4d4447d56ed8bacb61"
       define_method(:install) do
         bin.install "cortex-ia"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/lleontor705/cortex-ia/releases/download/v0.4.0/cortex-ia_0.4.0_linux_arm64.tar.gz"
-      sha256 "c5fa2d59bb4a06d3a4832ae8f3c1ebcf1764ed13ca673e4e9acac7adf2e9c6b2"
+      sha256 "9d5e27246029cba90f97196401e02b3264f2624a64295fa3d34acf38ab93ea05"
       define_method(:install) do
         bin.install "cortex-ia"
       end
