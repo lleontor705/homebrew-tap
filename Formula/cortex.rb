@@ -5,21 +5,21 @@
 class Cortex < Formula
   desc "Persistent memory for AI coding agents — knowledge graph, importance scoring, vector search"
   homepage "https://github.com/lleontor705/cortex"
-  version "2.1.7"
+  version "2.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/lleontor705/cortex/releases/download/v2.1.7/cortex_2.1.7_darwin_amd64.tar.gz"
-      sha256 "6d1a01b0685335ec6bcb18b2a5cbc64a42345ef41e3ee6316aa6124204b66df5"
+      url "https://github.com/lleontor705/cortex/releases/download/v2.3.0/cortex_2.3.0_darwin_amd64.tar.gz"
+      sha256 "453da97176ebcbdba1f015432e077eee4a5023b2165921e722ddd2613c066074"
 
       define_method(:install) do
         bin.install "cortex"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/lleontor705/cortex/releases/download/v2.1.7/cortex_2.1.7_darwin_arm64.tar.gz"
-      sha256 "18e6d624697db42530d441f3a96f67318301ac8d78499c889da72e44e964a5d9"
+      url "https://github.com/lleontor705/cortex/releases/download/v2.3.0/cortex_2.3.0_darwin_arm64.tar.gz"
+      sha256 "5418a7845332314cd766a411c98d06dac9e975e043a09d11be1aa125bde57701"
 
       define_method(:install) do
         bin.install "cortex"
@@ -29,15 +29,15 @@ class Cortex < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lleontor705/cortex/releases/download/v2.1.7/cortex_2.1.7_linux_amd64.tar.gz"
-      sha256 "7ad6c024031f9e47524c7de4f2378b5bc8265a8a36aad9e201530dadf473bd0f"
+      url "https://github.com/lleontor705/cortex/releases/download/v2.3.0/cortex_2.3.0_linux_amd64.tar.gz"
+      sha256 "15cd50d5b1c61a7ca0534a453eb6903bfa733e0f5319cd3b7df8ad7398fdc1df"
       define_method(:install) do
         bin.install "cortex"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lleontor705/cortex/releases/download/v2.1.7/cortex_2.1.7_linux_arm64.tar.gz"
-      sha256 "cfd739402dffaaf59e64a88a3bbc495578c1e84321422be546d48836da507b7b"
+      url "https://github.com/lleontor705/cortex/releases/download/v2.3.0/cortex_2.3.0_linux_arm64.tar.gz"
+      sha256 "57d79dee0f0c281b0d569f1647ec03b001e33130edd2f551bf9fbb58bea1640c"
       define_method(:install) do
         bin.install "cortex"
       end
